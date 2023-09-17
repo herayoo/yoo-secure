@@ -4,6 +4,7 @@ local secure = false
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     QBCore.Functions.TriggerCallback('yoo:checksecure', function(status)
+        Citizen.Wait(50)
         secure = status
     end)
 end)
@@ -26,7 +27,7 @@ RegisterCommand('checksecure', function()
     if secure then
         QBCore.Functions.Notify("Güvenlik sistemleri devrede.", "error", 3000)
     else
-        QBCore.Functions.Notify("Güvenlik sistemleri devre dışı", "success", 3000)
+        QBCore.Functions.Notify("Güvenlik sistemleri devre dışı", "inform", 3000)
     end
 end)
 
