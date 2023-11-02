@@ -1,9 +1,14 @@
-fx_version 'cerulean'
+fx_version 'bodacious'
 game 'gta5'
-author "herayoo discord.gg/venny"
 
-client_scripts "client/client.lua"
 
-server_script "server/server.lua"
+client_scripts {
+	"client/*",
+}
+
+server_scripts {
+	"config.lua",
+	"server/secure.lua"
+}
 
 exports {'GetSecureStatus'}

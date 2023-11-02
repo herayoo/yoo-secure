@@ -1,5 +1,6 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+--if xPlayer.PlayerData.job.name == "police" and xPlayer.PlayerData.job.grade >= 4 then
 
+local QBCore = exports['qb-core']:GetCoreObject()
 local secure = false
 
 QBCore.Functions.CreateCallback("yoo:checksecure", function(source, cb)
@@ -16,7 +17,7 @@ RegisterCommand("secure", function(source)
             TriggerClientEvent("yoo:secure:client:setSecureStatus", -1, false)
         else
             secure = true
-            TriggerClientEvent("QBCore:Notify", xPlayer.PlayerData.source, 'Güvenlik sistemlerini açtın.', "inform")
+            TriggerClientEvent("QBCore:Notify", xPlayer.PlayerData.source, 'Güvenlik sistemlerini açtın.', "success")
             TriggerClientEvent("yoo:secure:client:setSecureStatus", -1, true)
         end
     else

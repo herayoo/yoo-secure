@@ -27,7 +27,7 @@ RegisterCommand('checksecure', function()
     if secure then
         QBCore.Functions.Notify("Güvenlik sistemleri devrede.", "error", 3000)
     else
-        QBCore.Functions.Notify("Güvenlik sistemleri devre dışı", "inform", 3000)
+        QBCore.Functions.Notify("Güvenlik sistemleri devre dışı", "success", 3000)
     end
 end)
 
